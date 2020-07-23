@@ -1,12 +1,16 @@
 @import url(./__copyright/footer__copyright.css);
-.footer{
+
+.footer {
     max-width: 882px;
     margin: 66px auto 0;
     padding: 0 40px 60px;
+    grid-area: footer;
+    width: -webkit-fill-available;
 
 }
-@media (max-width: 320px){
-    .footer{
+
+@media (max-width: 320px) {
+    .footer {
         margin: 50px auto 0;
         padding-bottom: 36px;
     }

@@ -1,6 +1,4 @@
-//массив карточек
-//export const initialCards = [
-//];
+
 
 //Api Token
 const apiData = {
@@ -8,6 +6,10 @@ const apiData = {
     baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-12'
 };
 export default apiData;
+
+//массив карточек
+export const initialCards = [
+];
 /*
 //Массив Профиля
 export const formProfile = {

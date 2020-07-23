@@ -1,57 +1,52 @@
 import React from 'react';
 import api from '../utils/Api.js';
-import avatar from '../images/avatar.jpg';
+//import avatar from '../images/avatar1.jpg';
+//import initialCards from '../utils/utils.js';
+import Card from './Card';
 
 
 function Main(props) {
-const [userName, setUserName] = React.useState('Darth Vader');
-const [userDescription, setUserDescription] = React.useState('‎Dark Lord');
-const [userAvatar, setUserAvatar] = React.useState(avatar);
-  return (
-    
-        <main>
+    const [userName, setUserName] = React.useState('');
+    const [userDescription, setUserDescription] = React.useState('‎');
+    const [userAvatar, setUserAvatar] = React.useState('');
+    const [cards, setCards] = React.useState([]);
+
+    React.useEffect(() => {
+
+        Promise.all([api.getUserInfo(), api.getInitialCards()])
+            .then(([userData, initialCards]) => {
+                setUserName(userData.name);
+                setUserDescription(userData.about);
+                setUserAvatar(userData.avatar);
+                setCards([...initialCards]);
+            })
+            .catch(err => console.log(err));
+
+    }, [])
+    return (
+
+        <main className="content">
             <section className="profile">
                 <div className="profile__box">
-                    <img className="profile__avatar" src="#" alt="аватар"/>
-                    <img className="profile__pencil" onClick={props.onEditAvatar} src="./images/pencil.svg" alt="Редактировать"/>
+                    <img className="profile__avatar" src={userAvatar} alt="аватар" />
+                    <img className="profile__pencil" onClick={props.onEditAvatar} src="./images/pencil.svg" alt="Редактировать" />
                 </div>
                 <div className="profile__info">
                     <div>
-                        <h1 className="profile__name" data-id="">Жак Ив Кусто</h1>
-                        <p className="profile__description"></p>
+                        <h1 className="profile__name" data-id="">{userName}</h1>
+                        <p className="profile__description">{userDescription}</p>
                     </div>
                     <button className="profile__edit-button" onClick={props.onEditProfile} type="button"></button>
                 </div>
                 <button className="add-button" onClick={props.onAddPlace} type="button"></button>
             </section>
+
             <section className="cards">
-                <template id="cards-template">
-                    <div className="card">
-                        <img className="card__image" src="#" alt="Изображение"/>
-                        <div className="card__description">
-                            <h3 className="card__title"></h3>
-                            <div className="card__like">
-                                <button className="card__like-btn" type="button"></button>
-                                <span className="card__like-counter"></span>
-                            </div>
-                        </div>
-                        <button className="card__trash" type="button"></button>
-                    </div>
-                </template>
+            {cards.map(item => <Card key={item._id} card={item} onClick={props.onCardClick} />)}
             </section>
-
-
-            <section className="popup" id="view-image">
-                <figure className="popup__view">
-                    <button className="popup__close" id="close-view" type="button">+</button>
-                    <img className="popup__image" alt="изображение места" src="#"/>
-                    <figcaption className="popup__caption"></figcaption>
-                </figure>
-            </section>
-
         </main>
-     
-  );
+
+    );
 }
 
 export default Main;

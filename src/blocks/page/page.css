@@ -1,8 +1,15 @@
-.page{
+.page {
     width: 100%;
-    font-family:  'Inter', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     text-rendering: optimizeLegibility;
     background-color: #000000;
     color: white;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto;
     min-height: 100vh;
 }

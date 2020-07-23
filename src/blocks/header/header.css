@@ -1,13 +1,15 @@
-.header{
+.header {
     max-width: 882px;
-    border-bottom: 1px solid rgba(84,84,84,.7);
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
     margin: 0 auto;
     padding-top: 45px;
-    
+    grid-area: header;
+    width: -webkit-fill-available;
+
 }
 
-@media (max-width: 900px){
-    .header{
+@media (max-width: 900px) {
+    .header {
         padding-top: 30px;
     }
 }
