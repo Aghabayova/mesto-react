@@ -1,11 +1,13 @@
 import React from 'react';
 import api from '../utils/Api.js';
 import Card from './Card';
+import pen from '../images/pencil.svg'
+import avatar from '../images/avatar1.jpg'
 
 function Main(props) {
-    const [userName, setUserName] = React.useState('');
-    const [userDescription, setUserDescription] = React.useState('‎');
-    const [userAvatar, setUserAvatar] = React.useState('');
+    const [userName, setUserName] = React.useState('Darth Vader');
+    const [userDescription, setUserDescription] = React.useState('Lord of universe‎');
+    const [userAvatar, setUserAvatar] = React.useState(avatar);
     const [cards, setCards] = React.useState([]);
 
     React.useEffect(() => {
@@ -26,7 +28,7 @@ function Main(props) {
             <section className="profile">
                 <div className="profile__box">
                     <img className="profile__avatar" src={userAvatar} alt="аватар" />
-                    <img className="profile__pencil" onClick={props.onEditAvatar} src="./images/pencil.svg" alt="Редактировать" />
+                    <img className="profile__pencil" onClick={props.onEditAvatar} src={pen} alt="Редактировать" />
                 </div>
                 <div className="profile__info">
                     <div>
