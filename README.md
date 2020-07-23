@@ -2,67 +2,90 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Проект Место
 
-этот проект построен на React
+этот проект построен на фреймворке Реакт. 
 
-### `npm start`
+При помощи реакта созданы функциональные классовые и компоненты, взаимодействие с сервером через REST API,
+использование React хуков.useState и useEffect.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Проект 9: Место
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Обзор
+Данная проектная работа имеет своей целью применить полученные знания из теории обучения основам программирования языком JavaScript на практике. Этот сайт верстался на основе макета из Фигмы. 
 
-### `npm test`
+## Функциональность сайта: 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* использование семантических тегов;
+* возможность ввести свои данные (имя, вид деятельности);
+* удаление и добавление изображений; 
+* сайт адаптирован к разным расширениям экрана. 
 
-### `npm run build`
+## Основными задачами обучения этого проекта являются:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* первое знакомство со скриптовым языком программирования JavaScript.
+* понятия базовых типов данных в языке, операторы, выражения, работа с переменными JS и их типами и тд.
+* изучение технологии ООП
+* также изучить следующие шаги по овладению Гитом и Вебпак
+* работа с API
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Технологии исползованные при верстке сайта: 
 
-### `npm run eject`
+* HTML
+* CSS
+* Flex
+* Grid Layout
+* Отзывчивый и адаптивный дизайн от 320px до 1200px
+* Nested BEM
+* Java Script
+* OOP
+* JavaScript разбит на модули
+* WebPack
+* API
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### При помощи JavaScript реализованы:
+* форма для редактирования профиля пользователя;
+* форма для дополнения изображений; 
+* добавление основных изображений на сайт из массива через шаблон;
+* добавление картинок пользователя;
+* удаление изображений; 
+* лайки изображениям; 
+* валидация всех форм с использованием стандартных браузерных текстов ошибок;
+* улучшена UX при работе с попапами;
+* закрытие попапа нажатием на Esc;
+* закрытие попапа кликом на оверлей.
+* формла для добавления нового аватара;
+* форма для подтверждения удаления карточки;
+* счетчик лайков.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### При помощи API на сервер посылаются разного типа запросы для того чтобы получать данные с него, посылать новые данные, удалять элементы, ставить лайки, открывать формы итд.    
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+* [Ссылка на макет 1 в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
+* [Ссылка на макет 2 в Figma](https://www.figma.com/file/nlYpT4VhFiwimn2YlncrcF/JavaScript.-Sprint-5)
+* [Ссылка на макет 3 в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6)
+* [Ссылка на макет 4 в Figma](https://www.figma.com/file/hhhIavVTeuilfPPZ6sbifl/JavaScript.-Sprint-9)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+1. Для установки, запустите клонирование репозитория:
+    ```
+    git clone https://github.com/Aghabayova/mesto.git
+    ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+2. В терминале запускаем NPM
+    ```
+    npm install
+    ```
 
-### Analyzing the Bundle Size
+3. После успешной установки станут доступны команды 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    3.1 Поднимаем локальный сервер
+    ```
+    npm run dev
+    ```
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+    3.2 Сборку для продакшен
+    ```
+    npm run buid
+    ```
