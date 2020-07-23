@@ -1,5 +1,4 @@
 
-
 //Api Token
 const apiData = {
     authorization: '34b93c83-0a5b-42af-bf4b-3169bf836bcd',
@@ -10,7 +9,7 @@ export default apiData;
 //массив карточек
 export const initialCards = [
 ];
-/*
+
 //Массив Профиля
 export const formProfile = {
     popupEditProfile: '.popup__edit_profile',
@@ -73,4 +72,3 @@ export const formSelectors = {
 
 //all forms
 export const allForms = Array.from(document.querySelectorAll('.popup__content'));
-*/

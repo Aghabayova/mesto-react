@@ -1,9 +1,6 @@
 import React from 'react';
 import api from '../utils/Api.js';
-//import avatar from '../images/avatar1.jpg';
-//import initialCards from '../utils/utils.js';
 import Card from './Card';
-
 
 function Main(props) {
     const [userName, setUserName] = React.useState('');
@@ -42,11 +39,10 @@ function Main(props) {
             </section>
 
             <section className="cards">
-            {cards.map(item => <Card key={item._id} card={item} onClick={props.onCardClick} />)}
+                {cards.map(item => <Card key={item._id} card={item} onClick={props.onCardClick} />)}
             </section>
         </main>
 
     );
 }
-
 export default Main;

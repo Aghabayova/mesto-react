@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function PopupWithForm(props) {
     return (
         <section className={(props.isOpen ? "popup popup_opened" : "popup")} id={props.name}>
@@ -16,5 +15,4 @@ function PopupWithForm(props) {
         </section>
     );
 }
-
 export default PopupWithForm;

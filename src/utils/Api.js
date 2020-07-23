@@ -132,8 +132,6 @@ class Api {
                 return Promise.reject(`Что-то пошло не так: ${res.status}`);
             })
     }
-
-
 }
 
 //создаем экземпляр класса Api

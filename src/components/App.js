@@ -77,10 +77,7 @@ function App() {
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
       <Footer />
 
-
-
     </div>
   );
 }
-
 export default App;
