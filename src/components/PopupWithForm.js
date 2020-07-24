@@ -9,7 +9,7 @@ function PopupWithForm(props) {
                 <form className="popup__form popup__edit_profile" name="edit">
                     <h3 className="popup__heading">{props.heading}</h3>
                     {props.children}
-                    <button className="popup__save-btn" id="popup-save-btn" type="submit">{props.button}</button>
+                    <button className="popup__save-btn" id="popup-save-btn" type="submit">{props.buttonText}</button>
                 </form>
             </div>
         </section>

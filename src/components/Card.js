@@ -5,8 +5,8 @@ function Card(props) {
         props.onClick(props.card)
     }
     const imageStyle = {
-        backgroundImage: 'url(' + props.card.link + ')',
-      };
+        backgroundImage: `url(${props.card.link})`,
+    };
     return (
         <div className="card" key={props.card._id}>
             <div className="card__image" onClick={handleClick} style={imageStyle} />

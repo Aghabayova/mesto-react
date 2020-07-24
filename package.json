@@ -1,5 +1,7 @@
 {
   "name": "mesto",
+  "description": "first project in React",
+  "author": "Samira Aghabayova",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://aghabayova.github.io/mesto-react/",

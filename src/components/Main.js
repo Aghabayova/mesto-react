@@ -1,8 +1,8 @@
 import React from 'react';
 import api from '../utils/Api.js';
 import Card from './Card';
-import pen from '../images/pencil.svg'
-import avatar from '../images/avatar1.jpg'
+import pen from '../images/pencil.svg';
+import avatar from '../images/avatar1.jpg';
 
 function Main(props) {
     const [userName, setUserName] = React.useState('Darth Vader');
@@ -21,7 +21,7 @@ function Main(props) {
             })
             .catch(err => console.log(err));
 
-    }, [])
+    }, []);
     return (
 
         <main className="content">
@@ -35,9 +35,9 @@ function Main(props) {
                         <h1 className="profile__name" data-id="">{userName}</h1>
                         <p className="profile__description">{userDescription}</p>
                     </div>
-                    <button className="profile__edit-button" onClick={props.onEditProfile} type="button"></button>
+                    <button className="profile__edit-button" onClick={props.onEditProfile} type="button"/>
                 </div>
-                <button className="add-button" onClick={props.onAddPlace} type="button"></button>
+                <button className="add-button" onClick={props.onAddPlace} type="button"/>
             </section>
 
             <section className="cards">

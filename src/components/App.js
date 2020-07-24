@@ -29,7 +29,6 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setSelectedCard(false);
-    //setDataImage({});
   }
   function handleCardClick(props) {
     setSelectedCard({
@@ -59,19 +58,26 @@ function App() {
 
       <PopupWithForm isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} heading="Редактировать профиль" button="Сохранить" >
         <input className="popup__field popup__field_name" id="name-field" placeholder="Имя" type="text"
-          name="name" required pattern="[A-Za-zА-Яа-яЁё -]*" minlength="2" maxlength="40" />
+          name="name" required pattern="[A-Za-zА-Яа-яЁё -]*" minLength="2" maxLength="40" />
         <span className="popup__span-error" id="name-field-error"></span>
         <input className="popup__field popup__field_job" id="job-field" placeholder="О себе" type="text"
-          name="about" required minlength="2" maxlength="200" />
+          name="about" required minLength="2" maxLength="200" />
         <span className="popup__span-error" id="job-field-error"></span>
       </PopupWithForm >
 
-      <PopupWithForm isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} heading="Новое место" button="Создать">
-        <input className="popup__field popup__field_card" id="title-input" placeholder="Название"
-          type="text" name="name" required minlength="1" maxlength="30" />
+      <PopupWithForm isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} heading="Новое место" buttonText="Создать">
+        <input 
+        className="popup__field popup__field_card" 
+        id="title-input" placeholder="Название"
+        type="text" name="name" 
+        required minLength="1" 
+        maxLength="30" />
         <span className="popup__span-error" id="title-input-error"></span>
-        <input className="popup__field popup__field_link" id="url-input" placeholder="Ссылка на картинку"
-          type="url" required name="link" />
+        <input 
+        className="popup__field popup__field_link" 
+        id="url-input" placeholder="Ссылка на картинку"
+        type="url" 
+        required name="link" />
         <span className="popup__span-error" id="url-input-error"></span>
       </PopupWithForm >
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
