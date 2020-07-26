@@ -50,13 +50,13 @@ function App() {
       />
       <PopupWithForm heading="Вы уверены?" button="Да" />
 
-      <PopupWithForm isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} heading="Обновить аватар?" button="Сохранить">
+      <PopupWithForm isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} heading="Обновить аватар?" buttonText="Сохранить">
         <input className="popup__field popup__field_avatar" id="url-input" placeholder="Ссылка на картинку"
           type="url" name="link" required />
         <span className="popup__span-error" id="url-input-error"></span>
       </PopupWithForm>
 
-      <PopupWithForm isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} heading="Редактировать профиль" button="Сохранить" >
+      <PopupWithForm isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} heading="Редактировать профиль" buttonText="Сохранить" >
         <input className="popup__field popup__field_name" id="name-field" placeholder="Имя" type="text"
           name="name" required pattern="[A-Za-zА-Яа-яЁё -]*" minLength="2" maxLength="40" />
         <span className="popup__span-error" id="name-field-error"></span>
@@ -68,9 +68,12 @@ function App() {
       <PopupWithForm isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} heading="Новое место" buttonText="Создать">
         <input 
         className="popup__field popup__field_card" 
-        id="title-input" placeholder="Название"
-        type="text" name="name" 
-        required minLength="1" 
+        id="title-input" 
+        placeholder="Название"
+        type="text" 
+        name="name" 
+        required 
+        minLength="1" 
         maxLength="30" />
         <span className="popup__span-error" id="title-input-error"></span>
         <input 
