@@ -106,9 +106,9 @@ class Api {
     }
 
     //Добавление Лайков
-    addLike(card) {
-        return fetch(`${this._url}/cards/likes/${card._id}`, {
-            method: 'PUT',
+    changeLikeCardStatus(id, status) {
+        return fetch(`${this._url}/cards/likes/${id}`, {
+            method: `${(status) ? `PUT` : `DELETE`}`,
             headers: this._headers,
         })
             .then((res) => {
