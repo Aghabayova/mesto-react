@@ -5,15 +5,14 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
 function EditProfilePopup(props) {
     const currentUser = React.useContext(CurrentUserContext);
 
-    const [name, setName] = React.useState();
-    const [description, setDescription] = React.useState();
+    const [name, setName] = React.useState('');
+    const [description, setDescription] = React.useState('');
     // После загрузки текущего пользователя из API
     // его данные будут использованы в управляемых компонентах.
     React.useEffect(() => {
         setName(currentUser.name);
         setDescription(currentUser.about);
     }, [currentUser]);
-
 
     function handleNameInput(e) {
         setName(e.target.value);
@@ -28,7 +27,6 @@ function EditProfilePopup(props) {
             about: description,
         });
     }
-
 
     return (
         <PopupWithForm isOpen={props.isOpen} onClose={props.onClose} onSubmit={handleSubmit} heading="Редактировать профиль" buttonText="Сохранить" isLoading={props.isLoading}>
@@ -57,8 +55,6 @@ function EditProfilePopup(props) {
                 maxLength="200" />
             <span className="popup__span-error" id="job-field-error"></span>
         </PopupWithForm >
-
-
     )
 
 }

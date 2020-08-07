@@ -61,7 +61,7 @@ class Api {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
-                avatar: userData.link
+                avatar: userData.avatar
             })
         })
             .then(res => {
@@ -92,8 +92,8 @@ class Api {
     }
 
     //Удаление Карточки
-    deleteCard(card) {
-        return fetch(`${this._url}/cards/${card._id}`, {
+    deleteCard(id) {
+        return fetch(`${this._url}/cards/${id}`, {
             method: 'DELETE',
             headers: this._headers,
         })
