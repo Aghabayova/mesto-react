@@ -56,7 +56,7 @@
 * [Ссылка на макет 3 в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6)
 * [Ссылка на макет 4 в Figma](https://www.figma.com/file/hhhIavVTeuilfPPZ6sbifl/JavaScript.-Sprint-9)
 
-* [Ссылка на проект](https://aghabayova.github.io/mesto-react/)
+* [Link to the project](https://aghabayova.github.io/mesto-react/)
 
 
 1. Для начала, запустите клонирование репозитория:
